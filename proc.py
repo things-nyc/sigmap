@@ -31,7 +31,7 @@ def load_gps_rx(fn):
       s = line.split(',')
       lat = int(s[3][0:2]) + float(s[3][2:])/60
       lat_dir = s[4]
-      lon = int(s[5][0:2]) + float(s[5][2:])/60
+      lon = int(s[5][0:3]) + float(s[5][3:])/60
       lon_dir = s[6]
       d = {}
       d['server_time'] = t
@@ -72,7 +72,6 @@ if len(sys.argv) < 4:
 
 ttn_ds = load_ttn_rx(sys.argv[1])
 gps_ds = load_gps_rx(sys.argv[2])
-merged_ds = match_ttn_gps(ttn_ds,gps_ds) 
+merged_ds = match_ttn_gps(ttn_ds,gps_ds)
 with open(sys.argv[3],'w') as f:
   f.write(json.dumps(merged_ds,sort_keys=True,indent=4,separators=(',', ': ')))
-
