@@ -1,0 +1,14 @@
+nj_07087_2
+Gateway: MultiTech Conduit
+Gateway Antenna: MultiTech stock 
+Gateway Location: Indoor, 3rd floor, urban
+Node: Microchip LoRa Technology MOTE 
+Node Power: maximum
+Description:
+  Walked from 8th&Palisade down to 3rd&Palisade, 
+  then up to 14th&Palisade, back down to 9th&Palisade.
+  Then walked towards Bergenline avenue up 9th street,
+  and back to Palisade via 8th street.
+Observations:
+  Observed complete packet loss at extremes,
+  particularly to west of New York Avenue.
