@@ -67,11 +67,13 @@ def to_csv(ttn_ds,fn):
     pass
 
 if len(sys.argv) < 4:
-  print "Usage: python proc.py <ttn.data> <gps.data> <output.json>"
+  print "Usage: python proc.py <ttn.data> <gps.data> <output>"
   exit(-1)
 
 ttn_ds = load_ttn_rx(sys.argv[1])
 gps_ds = load_gps_rx(sys.argv[2])
 merged_ds = match_ttn_gps(ttn_ds,gps_ds)
-with open(sys.argv[3],'w') as f:
+with open(sys.argv[3]+'.json','w') as f:
   f.write(json.dumps(merged_ds,sort_keys=True,indent=4,separators=(',', ': ')))
+with open(sys.argv[3]+'.gps.json','w') as f:
+  f.write(json.dumps(gps_ds,sort_keys=True,indent=4,separators=(',', ': ')))
