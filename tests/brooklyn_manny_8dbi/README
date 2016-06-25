@@ -1,0 +1,11 @@
+brooklyn_manny_8dbi
+Gateway: MultiTech Conduit
+Gateway Antenna: L-Com 8dBi Omni HG908U-PRO 
+Gateway Location: Roof above 3rd floor, urban
+Node: Microchip LoRa Technology MOTE 
+Node Power: maximum
+Description:
+  Walked around Boerem Hill neighborhood
+Observations:
+  Only observed complete packet loss while
+  walking through parking garage beyond Atlantic Ave
